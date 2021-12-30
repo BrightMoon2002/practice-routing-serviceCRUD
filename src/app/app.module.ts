@@ -11,6 +11,14 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { ShowEditBookComponent } from './show-edit-book/show-edit-book.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatIcon, MatIconModule} from "@angular/material/icon";
+import {MatCardModule} from "@angular/material/card";
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +36,13 @@ import { ShowEditBookComponent } from './show-edit-book/show-edit-book.component
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
