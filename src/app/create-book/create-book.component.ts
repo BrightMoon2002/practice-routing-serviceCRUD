@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BookService} from "../book.service";
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Book} from "../book";
 
 @Component({
@@ -25,11 +25,11 @@ export class CreateBookComponent implements OnInit {
 
   ngOnInit(): void {
     this.book = this.fb.group({
-      id: '',
-      name: '',
-      author: '',
-      category: '',
-      price: ''
+      id: ['', Validators.required],
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      author: ['', [Validators.required, Validators.minLength(3)]],
+      category: ['', [Validators.required, Validators.minLength(3)]],
+      price: ['', [Validators.required, Validators.min(1000)]]
     });
   }
   onSubmit() {

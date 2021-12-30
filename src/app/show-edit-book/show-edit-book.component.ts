@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../book";
 import {BookService} from "../book.service";
-import {FormBuilder} from "@angular/forms";
+import {FormBuilder, Validators} from "@angular/forms";
 import {Subscription} from "rxjs";
 import {ActivatedRoute, ParamMap} from "@angular/router";
 
@@ -37,10 +37,10 @@ export class ShowEditBookComponent implements OnInit {
   ngOnInit(): void {
     this.book = this.fb.group({
       id: '',
-      name: '',
-      author: '',
-      category: '',
-      price: ''
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      author: ['', [Validators.required, Validators.minLength(3)]],
+      category: ['', [Validators.required, Validators.minLength(3)]],
+      price: ['', [Validators.required, Validators.min(1000)]]
     });
   }
   editBook() {

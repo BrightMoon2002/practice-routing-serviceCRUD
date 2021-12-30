@@ -15,11 +15,13 @@ const routes: Routes = [
   },
   {
     path: 'create',
-    component: CreateBookComponent
+    component: CreateBookComponent,
+    data: {title: 'Create'}
   },
   {
     path: 'list',
-    component: BookListComponent
+    component: BookListComponent,
+    data: {title: 'ListBook'}
   },
   {
     path: 'delete/:id',
