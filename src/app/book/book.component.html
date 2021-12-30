@@ -1,0 +1,24 @@
+<h2 style="text-align: center">Book Detail</h2>
+<div>
+  <table class="table table-danger table-sm">
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Category</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngIf="book">
+      <td><a routerLink="/detail/{{book.id}}">{{book.name}}</a></td>
+      <td>{{book.author}}</td>
+      <td>{{book.category}}</td>
+      <td>{{book.price}}</td>
+      <td>
+        <a routerLink="/delete/{{book.id}}"><button type="button">Delete</button></a>
+      </td>
+
+    </tr>
+  </table>
+
+
+</div>
+<footer>@HDCodegym2021 entertainment</footer>

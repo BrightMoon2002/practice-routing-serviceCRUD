@@ -1,0 +1,68 @@
+<form novalidate (ngSubmit)="editBook()"
+      class="row justify-content-md-center"
+      [formGroup]="book">
+
+  <div *ngIf="bookMain" class="col-md-8">
+    <div class="form-group row">
+      <label for="example-id-input" class="col-2 col-form-label" >
+        Id:
+      </label>
+      <div class="col-10">
+        <input class="form-control" type="text"
+               id="example-id-input"
+               formControlName="id" [(ngModel)]="bookMain.id">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-name-input" class="col-2 col-form-label" >
+        Name:
+      </label>
+      <div class="col-10">
+        <input class="form-control" type="text"
+               id="example-name-input"
+               formControlName="name" [(ngModel)]="bookMain.name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-author-input" class="col-2 col-form-label">
+        Author:
+      </label>
+      <div class="col-10">
+        <input class="form-control" type="text"
+               id="example-author-input" formControlName="author" [(ngModel)]="bookMain.author">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-input-category" class="col-2 col-form-label">
+        Category:
+      </label>
+      <div class="col-10">
+        <input class="form-control" type="url" id="example-input-category" formControlName="category" [(ngModel)]="bookMain.category">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-input-price" class="col-2 col-form-label">
+        Price:
+      </label>
+      <div class="col-10">
+        <input class="form-control" type="url" id="example-input-price" formControlName="price" [(ngModel)]="bookMain.id">
+      </div>
+    </div>
+
+    <!--        button-->
+    <!--        <div class="form-group row">-->
+    <!--            <div class="col-10 offset-2">-->
+    <!--                <button class="btn btn-primary"-->
+    <!--                        type="submit">Submit</button>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <button class="btn btn-primary" type="submit"
+            [disabled]="book.invalid">
+      Edit
+    </button>
+  </div>
+</form>
+<p>Form value: </p>
+<pre> {{  book.value | json }}</pre>
+<pre> {{  book.controls.name?.errors | json }}</pre>
+
