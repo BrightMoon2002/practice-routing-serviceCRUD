@@ -9,7 +9,9 @@ import {Observable} from "rxjs";
 })
 export class BookService {
   //API_LOCAL
-  private API_SHOWLIST = environment.API_LOCAL;
+  // private API_SHOWLIST = environment.API_LOCAL;
+  //API_HEROKU
+  private API_SHOWLIST = environment.API_SERVER;
   books: Book[] = [];
   // books: Book[] = [
   //   {
