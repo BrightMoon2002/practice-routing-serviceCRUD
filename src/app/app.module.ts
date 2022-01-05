@@ -17,6 +17,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatIcon, MatIconModule} from "@angular/material/icon";
 import {MatCardModule} from "@angular/material/card";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 
 
@@ -40,6 +41,7 @@ import {MatCardModule} from "@angular/material/card";
     BrowserAnimationsModule,
     MatSliderModule,
     MatFormFieldModule,
+    HttpClientModule,
     MatInputModule,
     MatIconModule,
     MatCardModule
