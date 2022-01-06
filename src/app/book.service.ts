@@ -11,7 +11,7 @@ export class BookService {
   //API_LOCAL
   // private API_SHOWLIST = environment.API_LOCAL;
   //API_HEROKU
-  private API_SHOWLIST = environment.API_SERVER;
+  private API_SHOWLIST = environment.API_LOCAL;
   books: Book[] = [];
   // books: Book[] = [
   //   {
